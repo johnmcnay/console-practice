@@ -40,12 +40,33 @@ namespace knock_knock
 
         private static bool isInvalidKnockKnockResponse(string response)
         {
-            return (response != "Who's there?");
+            string[] validResponses = { "who's there", "who is there", "who's there?", "who is there?" };
+            string validResponse = response.ToLower();
+
+            foreach (string resp in validResponses)
+            {
+                if (validResponse == resp)
+                {
+                    return false;
+                }
+            }
+            return true;
+
         }
 
         private static bool isInvalidWhoResponse(string response)
         {
-            return (response != "Boo who?");
+            string[] validResponses = { "boo who", "boo who?" };
+            string validResponse = response.ToLower();
+
+            foreach (string resp in validResponses)
+            {
+                if (validResponse == resp)
+                {
+                    return false;
+                }
+            }
+            return true;
         }
     }
 }
