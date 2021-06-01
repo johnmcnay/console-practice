@@ -4,9 +4,13 @@ namespace knock_knock
 {
     class Program
     {
+
+
         static void Main(string[] args)
         {
-            
+
+            string[][] knockKnockJokes = createJokes();
+
             string response;
 
             do
@@ -36,6 +40,33 @@ namespace knock_knock
 
             Console.WriteLine("Don't cry! It's just a joke.");
 
+        }
+
+        private static string[][] createJokes()
+        {
+            string[][] knockKnockJokes = new string[6][];
+
+            knockKnockJokes[0] = new string[2];
+            knockKnockJokes[0] = new string[] { "Boo", "Don't cry! It's just a joke."};
+
+            knockKnockJokes[1] = new string[2];
+            knockKnockJokes[1] = new string[] { "Boo", "Don't cry! It's just a joke." };
+
+            knockKnockJokes[2] = new string[2];
+            knockKnockJokes[2] = new string[] { "Boo", "Don't cry! It's just a joke." };
+
+            knockKnockJokes[3] = new string[2];
+            knockKnockJokes[3] = new string[] { "Boo", "Don't cry! It's just a joke." };
+
+            knockKnockJokes[4] = new string[2];
+            knockKnockJokes[4] = new string[] { "Boo", "Don't cry! It's just a joke." };
+
+            knockKnockJokes[5] = new string[2];
+            knockKnockJokes[5] = new string[] { "Boo", "Don't cry! It's just a joke." };
+
+
+
+            return knockKnockJokes;
         }
 
         private static bool isInvalidKnockKnockResponse(string response)
